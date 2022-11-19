@@ -1,0 +1,73 @@
+{% extends "base.njk" %}
+{% block contenido %}
+    <link rel="stylesheet" href="/archivospublicos/estiloTresEnRalla.css"/>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+        <script src="/archivospublicos/tresenralla.js" async="async"></script>
+
+    <h1>Tres en raya contra la máquina</h1>
+    <div class="container" id="container" name="container">
+      <div class="datosJugador" id="datosJugador" name="datosJugador">
+        Nombre del jugador: <input type="text" id="nombre" placeholder="Introduzca nombre"/> partidas Maximas:
+        <input type="number" id="partidasMaximas" placeholder="Cantidad de partidas"/>
+      </div>
+    </div>
+    <div class="menu" id="menu">
+      <button name="siguientePartida" id="siguientePartida">Siguiente Partida</button>
+      <button name="iniciar" id="iniciar">Iniciar juego</button>
+      <button name="reset" id="reset">Resetear contadores</button>
+      <button name="muestraDatos" id="muestraDatos">Mostrar puntuación</button>
+      <button name="resetGame" id="resetGame">Reiniciar juego</button>
+      <button name="guardarDatos" id="guardarDatos">Guardar puntuación</button>
+      <button name="cargarDatos" id="cargarDatos">Cargar puntuación</button>
+      <button name="salir" id="salir">Salir</button>
+      </div>
+      <!--este es el contenedor de los datos-->
+      <table id="tablaDePuntos" name="tablaDePuntos" class="tableDePuntos">
+        <div id="datosPartida" class="datosPartida" name="datosPartida">
+          
+          <td>
+            <h2 class="tituloTabla">PUNTUACIÓN</h2>
+            <h3>PuntosJugador:</h3>
+            <h3 id="puntosJugador"></h3>
+            <h3>Puntos Máquina:</h3>
+            <h3 id="puntosMaquina"></h3>
+            <h3>Empates:</h3>
+            <h3 id="empates"></h3>
+            <h3>Partidas Jugadas:</h3>
+            <h3 id="partidasJugadas"></h3>
+          </td>
+        </th>
+      </div>
+      <!-- BotonesMenu-->
+    </div>
+    <th></th>
+    <td>
+      <h1 id="TextoFinDelJuego" class="TextoFinDelJuego" name="TextoFinDelJuego" value="HAS GANADO"></h1>
+      <h2 id="textoVictoria"></h2>
+      <div class="tablero" id="tablero" name="tablero">
+        <button name="botonesJuego"></button>
+        <button name="botonesJuego"></button>
+        <button name="botonesJuego"></button>
+        <button name="botonesJuego"></button>
+        <button name="botonesJuego"></button>
+        <button name="botonesJuego"></button>
+        <button name="botonesJuego"></button>
+        <button name="botonesJuego"></button>
+        <button name="botonesJuego"></button>
+      </th>
+    </td>
+
+{% endblock %}

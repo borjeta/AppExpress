@@ -1,0 +1,76 @@
+h1{
+    text-align: center;
+}
+section {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(
+      45deg,
+      rgb(231, 171, 171),
+      rgb(194, 194, 230),
+      rgb(157, 238, 157),
+      rgb(59, 53, 53)
+    );
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
+  }
+
+.descripcionSimon{
+    
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+}
+#salida{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#simon{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.color{
+    width: 50%;
+    height: 200px;
+}
+
+#verde{
+    border-radius: 100% 0 0 0;
+    background: #049E03;
+}
+
+#rojo{
+    border-radius: 0 100% 0 0;
+    background: #AE0404;
+}
+
+#amarillo{
+    border-radius: 0 0 0 100%;
+    background: #CAC902;
+}
+
+#azul{
+    border-radius: 0 0 100% 0;
+    background: #0404A6;
+}
+
+#empezar{
+    display: block;
+    margin: 2rem auto;
+}
+h6{
+    color: black;
+}

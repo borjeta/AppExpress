@@ -1,0 +1,108 @@
+section {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background: linear-gradient(
+    45deg,
+    rgb(231, 171, 171),
+    rgb(194, 194, 230),
+    rgb(157, 238, 157),
+    rgb(59, 53, 53)
+  );
+  background-size: 400% 400%;
+  position: relative;
+  animation: cambiar 10s ease-in-out infinite;
+}
+h1,
+h2 {
+  text-align: center;
+  border: 5px;
+  border-style: solid;
+  border-color: rgb(112, 165, 206);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+table {
+  margin: 0 auto;
+  background-color: rgb(177, 182, 187);
+  color: rgb(2, 1, 1);
+  align-items: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#tablero {
+  margin: auto;
+  width: 475px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#tablero > button {
+  width: 250px;
+  height: 175px;
+  max-width: 33.33%;
+  font-size: 7em;
+}
+#tablero > button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(112, 165, 206);
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#datosJugador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#datosPartida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#datosJugador > h3,
+#datosPartida > h3 {
+  color: rgb(0, 0, 0);
+}
+
+#menu > button {
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  max-width: 33.33%;
+  font-size: 1em;
+  display: inline-block;
+}
+
+#textoVictoria {
+  visibility: hidden;
+  color: Chartreuse;
+}
+footer {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  /*Siempre en el bottom  de la pagina*/
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(177, 182, 187);
+  border: 1px solid black;
+  border-collapse: collapse;
+}

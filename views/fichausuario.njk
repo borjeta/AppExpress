@@ -1,0 +1,41 @@
+{% extends "base.njk" %}
+{% block contenido %}
+    <link
+        href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
+        rel="stylesheet"
+        id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Container principal -->
+    <br>
+    <br>
+    <div class="container-fluid well span6" id="containerficha" name="containerficha">
+        <div class="row-fluid">
+            <div class="span2" id="imagenperfil" name="imagenperfil">
+                <img src="https://secure.gravatar.com/avatar/de9b11d0f9c0569ba917393ed5e5b3ab?s=140&r=g&d=mm" class="img-circle"></div>
+            <div class="span8" id="cuadrodatosperfil" name="cuadrodatosperfil">
+                <h3>{{ usuario.usuario }}</h3>
+                <h6>Email:{{ usuario.usuario }}@servidor.com</h6>
+                <h6>Edad:{{ usuario.edad }}</h6>
+                <h6>Record en Simon's: {{ usuario.record_simon }}</h6>
+                <h6>Record en tres en ralla: {{ usuario.record_tresenralla }}</h6>
+            </div>
+            <div class="span2">
+                                Acciones
+                            </a>
+            <ul class="menu">
+                <li>
+                    <a href="/usuarios/{{ usuario.id }}/editar">
+                                        Modificar</a>
+                </li>
+                <li>
+                    <a href="/usuarios/borrarperfil/{{ usuario.id }}">
+                                        Borrar cuenta</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+{% block contenido %}
+    <div class="container-fluid">
+        <h1>Ranking</h1>
+        <table class="table table-dark table-striped" id="tablapuntos">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Record Simon</th>
+                    <th scope="col">Record Tres en ralla</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                    <tr>
+                        <td>{{ usuario.usuario }}</td>
+                        <td>{{ usuario.record_simon }}</td>
+                        <td>{{ usuario.record_tresenralla }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,23 @@
+{%extends "base.njk"%}
+{% block contenido %}
+    <section>
+        <link rel="stylesheet" href="/archivospublicos/style.css" rel="stylesheet">
+        <script src = "/archivospublicos/simon.js" type="text/javascript" defer="defer"></script>
+    </head>
+
+    <h6>Nombre:<input id = "camponombre" placeholder="Introduce tu nombre..." value={{usuario.nombre}}></h6>
+    <h1 id ="tituloJugador"></h1>
+    <p id="salida">NIVEL 1</p>
+    <div id="simon">
+        <div id="verde" class="color"></div>
+        <div id="rojo" class="color"></div>
+        <div id="amarillo" class="color"></div>
+        <div id="azul" class="color"></div>
+        
+    </div>
+    <div id ="descripcionSimon">
+            <p>El juego consiste en repetir la secuencia de colores que se van mostrando en pantalla. Para ello, deberás pulsar los botones de los colores en el orden correcto. Si lo haces bien, pasarás al siguiente nivel. Si no, perderás.</p>
+        </div>
+    <button id="empezar">EMPEZAR</button>
+</section>
+{% endblock %}

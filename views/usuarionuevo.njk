@@ -1,0 +1,27 @@
+{% extends "base.njk" %}
+{% include "menu.njk" %}
+{% block titulo %}Usuario | Nuevo{% endblock %}
+
+{% block contenido %}
+
+    <h1>Inserción de nuevo usuario</h1>
+
+    <form action="/usuarios/usuarionuevo/" method="post">
+        <div class="form-group">
+            <label for="usuario">Nombre:</label>
+            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Nombre de usuario">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" name="password" id="password"
+            placeholder="Password"/>
+        </div>
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" class="form-control" name="edad" id="edad"
+            placeholder="Años..."/>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+{% endblock %}

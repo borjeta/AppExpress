@@ -1,0 +1,26 @@
+<!-- Ventana principal de login del usuario -->
+{% extends "base.njk" %}
+{% block contenido %}
+    <div class="containerformlogin" id="containerformlogin" name="containerformlogin">
+        <form id="formlogin" name="formlogin" class="formlogin" method="post">
+            <h1>Inicio de sesión</h1>
+            <div class="form-group">
+                <label for="usuario">usuario:</label>
+                <input type="text" class="form-control" id="usuario" name="usuario"aria-describedby="ayudaNombre" placeholder="Introduzca el nombre" required>
+                    <small id="ayudanombre" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password"  name ="password" placeholder="Password" required></div>
+                    <div class="form-group form-check">
+                        <button id = "btnIniciarSesion" type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    </div>
+                    <div class="form-group form-check">
+                        <a href="/usuarios/usuarionuevo/">¿No tienes cuenta? Regístrate</a>
+                    </div>
+                    <script src = "/archivospublicos/controlador.js"></script>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

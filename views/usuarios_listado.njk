@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+{% block contenido %}
+    <div class="container" id="cuadrolistausuarios" name="cuadrolistausuarios">
+        <h1>Listado de usuarios</h1>
+        <table id="tablausuarios" name="tablausuarios" class="table table-dark table-striped">
+            <ul>
+                
+                {% for usuario in usuarios %}
+                    <tr>
+                        <td>
+                        {{ usuario.usuario }}
+                        <a class="btn btn-success" href="/usuarios/fichauser/{{ usuario.id }}">Ver Ficha
+                        </a>
+                        <form action="/usuarios/borrarusuario/{{ usuario.id }}" method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <button type="submit" class="btn btn-danger">Borrar</button>
+                        </form>
+                        <a class="btn btn-warning" href="/usuarios/formularioeditarusuario/{{usuario.id}}">Editar</a>
+                        </td>
+                        
+                    </tr>
+                {% endfor %}
+                
+            </ul>
+        </table>
+        {% endblock contenido %}

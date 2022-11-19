@@ -1,0 +1,30 @@
+{% extends "base.njk" %}
+{% include "menu.njk" %}
+{% block titulo %}EDITAR{% endblock %}
+
+{% block contenido %}
+
+    <h1>Editar usuario</h1>
+    <h2> {{usuario.nombre}} gadfgsdf</h2>
+
+    <form action="/usuarios/formularioeditarusuario/{{usuario.id}}" method="post">
+        <input type="hidden" name="id" value="{{usuario.id}}">
+        <div class="form-group">
+            <label for="titulo">Nuevo nombre:</label>
+            <input type="text" class="form-control" name="nombre"
+                value="{{usuario.nombre}}"/>
+        </div>
+        <div class="form-group">
+            <label for="editorial">Nueva edad:</label>
+            <input type="text" class="form-control" name="edad" value="{{usuario.edad}}"
+                value="{{usuario.edad}}" />
+        </div>
+        <div class="form-group">
+            <label for="password">Nuevo password:</label>
+            <input type="number" class="form-control" name="password" value="{{usuario.password}}"/>    
+        </div>
+        <input type="hidden" name="_method" value="put"/>
+        <button type="submit" class="btn btn-danger">Editar</button>
+    </form>
+
+{% endblock %}
